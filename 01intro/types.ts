@@ -72,3 +72,37 @@ function addTwo(num: number): number {
 }
 
 let myVal = addTwo(5);
+
+//arrow function with return type
+
+let getReturn = (s: string):string => {
+    return ("str1");
+}
+
+//knowing the type depending on the context
+const str = ["str1", "str2", "str3"];
+const num = [1, 2, 3];
+
+//st is by default a string, don't need to specify the type
+let newStr = str.map((st):string => {
+    return `string is ${st} `
+})
+
+//num is by default a number, don't need to specify the type
+let newNum = num.map((nm):number => {
+    return (nm + 1)
+})
+
+console.log(newStr)
+console.log(newNum)
+
+
+//Error Handling
+function consoleError(errMsg: string): void{
+    console.log(errMsg);
+}
+
+//never: throws exception or terminates the execution of a program
+function handleError(errMsg: string): never{
+    throw new Error(errMsg);
+}

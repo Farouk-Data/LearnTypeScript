@@ -49,3 +49,28 @@ function addTwo(num) {
     // return "str";
 }
 var myVal = addTwo(5);
+//arrow function with return type
+var getReturn = function (s) {
+    return ("str1");
+};
+//knowing the type depending on the context
+var str = ["str1", "str2", "str3"];
+var num = [1, 2, 3];
+//st is by default a string, don't need to specify the type
+var newStr = str.map(function (st) {
+    return "string is ".concat(st, " ");
+});
+//num is by default a number, don't need to specify the type
+var newNum = num.map(function (nm) {
+    return (nm + 1);
+});
+console.log(newStr);
+console.log(newNum);
+//Error Handling
+function consoleError(errMsg) {
+    console.log(errMsg);
+}
+//never: throws exception or terminates the execution of a program
+function handleError(errMsg) {
+    throw new Error(errMsg);
+}
