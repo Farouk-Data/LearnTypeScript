@@ -20,8 +20,6 @@ function createTypeObj(user) {
 createTypeObj({ name: "", email: "", isActive: true });
 var myObj = {
     _id: "str",
-    val: 5
+    val: 5,
 };
 myObj.val = 69;
-//can't do this
-// myObj._id = "new";
